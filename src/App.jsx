@@ -4,7 +4,7 @@ function App() {
       <h1>Welcome to My Vite + React App 🌿</h1>
       <h1>Hello from the Preview 🌿✨</h1>
       <p>Deployed live via Netlify!</p>
-      <h1>Hello🌿✨</h1>
+      <h1>Hello🌿✨new</h1>
     </div>
   );
 }
