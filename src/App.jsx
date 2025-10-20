@@ -7,4 +7,6 @@ function App() {
       <h1>Hello from the Preview 🌿✨</h1>
     </div>
   );
+}
+
 export default App;
