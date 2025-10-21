@@ -16,6 +16,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+p, span {
+  font-family: "Figtree", sans-serif;
+}
+* p, * span {
+  font-family: "Figtree", sans-serif;
+}
+
 /* Box sizing rules */
 *,
 *::before,
