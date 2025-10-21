@@ -6,7 +6,7 @@
 	font-weight: 800;
 	margin: 0px !important;
 	text-transform: capitalize !important;
-	padding:0px 20px !important;
+	/* padding:0px 20px !important; */
 	margin-bottom:16px !important;
 }
 
@@ -18,12 +18,12 @@
     font-style: italic;
 	margin:0px !important;
 /* 	padding:0px !important; */
-	padding:0px 20px !important;
+	/* padding:0px 20px !important; */
 	margin-bottom:16px !important;
 }
 
 .ac-product-highlights{
-	margin:0px 20px !important;
+	/* margin:0px 20px !important; */
 	margin-bottom:16px !important;
 }
 
