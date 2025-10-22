@@ -1,0 +1,161 @@
+/* Product Section Styles */
+
+/*  product page new elements */
+.ac-product-maintitle__container h1{
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 800;
+	margin: 0px !important;
+	text-transform: capitalize !important;
+	/* padding:0px 20px !important; */
+	margin-bottom:16px !important;
+  margin-top: 0px !important;
+}
+
+.ac-product-subtitle p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    letter-spacing: .25px;
+    font-style: italic;
+	margin:0px !important;
+/* 	padding:0px !important; */
+	/* padding:0px 20px !important; */
+	margin-bottom:16px !important;
+}
+
+.ac-product-highlights{
+	/* margin:0px 20px !important; */
+	margin-bottom:16px !important;
+}
+
+.ac-product-highlights *{
+	margin:0px !important;
+	padding:0px !important;
+}
+.ac-product-highlights ul{
+	margin-left:20px !important;
+}
+.ac-product-highlights h2.ac-product-highlights__heading {
+	text-transform: capitalize !important;
+}
+
+.ac-product-description__maintitle-wrapper h2 {
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #797979;
+	text-transform: capitalize !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+  
+}
+
+h3.ac-product-description__subtitle{
+	font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__coredescription p{
+	font-size:16px !important;
+	line-height:25px !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__UsesCases{
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__UsesCases h4{
+		font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__UsesCases p{
+	font-size:16px !important;
+	line-height:25px !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__contextuse h4{
+font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__contextuse p{
+	font-size:16px !important;
+	line-height:25px !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__keyBenefits h3{
+font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__keyBenefits p{
+	font-size:16px !important;
+	line-height:25px !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__keyBenefits ul {
+/*     line-height: normal; */
+/*     font-size: 14px; */
+	margin:0px !important;
+	padding:0px !important;
+	margin-bottom:16px !important;
+    margin-left: 20px !important;
+/*     letter-spacing: 0.25px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ac-product-description__keyBenefits ul li{
+	margin: 0px !important;
+    padding: 0px !important;
+	font-size:16px !important;
+	line-height:25px !important;
+}
+.ac-product-description__keyBenefits ul li p{
+	margin: 0px !important;
+   
+}
+
+.ac-product-description__WhatToExpect h4{
+font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__WhatToExpect p{
+	font-size:16px !important;
+	line-height:25px !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+

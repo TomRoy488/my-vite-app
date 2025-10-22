@@ -1,0 +1,27 @@
+/* How to Use Section Styles */
+
+.ac-product-description__howtouse h3{
+font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__howtouse h4{
+font-size:16px !important;
+	line-height:25px !important;
+	text-transform: capitalize !important; 
+	font-weight:700;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+
+.ac-product-description__howtouse p{
+	font-size:16px !important;
+	line-height:25px !important;
+	margin:0 !important;
+	margin-bottom:16px !important;
+}
+

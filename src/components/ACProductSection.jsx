@@ -1,6 +1,3 @@
-
-import React from "react";
-
 export default function ACProductSection({
   as: Tag = "section", // default tag type
   className = "",

@@ -1,0 +1,37 @@
+/* Header Styles */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: var(--spacing-lg) 0;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border-light);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.header__container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-text {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+

@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+import ProductMenu from "./components/ProductMenu";
 import ProductHeader from "./components/product/ProductHeader";
 import ProductHighlights from "./components/product/ProductHighlights";
 import ProductDescriptionTitle from "./components/product/ProductDescriptionTitle";
@@ -18,25 +20,34 @@ import MythReference from "./components/product/MythReference";
 
 function App() {
   return (
-    <div className="p-8 space-y-8">
-      <ProductHeader />
-      <ProductHighlights />
-      <ProductDescriptionTitle />
-      <ProductOverview />
-      <CoreDescription />
-      <UsesCases />
-      <ContextUse />
-      <KeyBenefits />
-      <WhatToExpect />
-      <HowToUse />
-      <IngredientsOverview />
-      <SafetySuitability />
-      <ScientificValidation />
-      <FormulationLogic />
-      <DoshaGuide />
-      <GranthicLogic />
-      <MythReference />
-    </div>
+    <>
+      <Header />
+      <div className="ac-product-description">
+        {/* Sidebar Menu */}
+        <ProductMenu />
+
+        {/* Product Content */}
+        <div className="ac-product-description__content">
+          <ProductHeader />
+          <ProductHighlights />
+          <ProductDescriptionTitle />
+          <ProductOverview />
+          <CoreDescription />
+          <UsesCases />
+          <ContextUse />
+          <KeyBenefits />
+          <WhatToExpect />
+          <HowToUse />
+          <IngredientsOverview />
+          <SafetySuitability />
+          <ScientificValidation />
+          <FormulationLogic />
+          <DoshaGuide />
+          <GranthicLogic />
+          <MythReference />
+        </div>
+      </div>
+    </>
   );
 }
 

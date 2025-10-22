@@ -1,0 +1,81 @@
+/* Product Page Layout Styles */
+
+.ac-product-description{
+  /* padding: 10px 10px; */
+  display: grid;
+      grid-template-columns: 15% 85%;
+      gap: 10px;
+      width: 100%;
+      max-width: 100%;
+}
+
+.ac-product-description__content{
+	background-color: white;
+/*     padding: 18px 5%; */
+    /* border: #2e2d2d40 solid 2px; */
+    width: 100%;
+
+    padding: 10px 10px 0px 0px;
+}
+.ac-product-description__content > * {
+  width: 100%;
+}
+
+/* Product Menu Styles */
+.ac-product-description__menu{
+  width: 100%;
+    background: linear-gradient(180deg, #A276FF 0%, #ffffff 100%);
+    max-height: 100vh;
+    overflow: auto;
+    position: sticky;
+    top: 69px;
+    background: url(https://www.test.ayurcentral.in/wp-content/uploads/webp_images/Sidebar-Bkg.webp) center center / cover no-repeat;
+}
+
+.ac_productMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 10px;
+  margin: 0;
+
+  font-family: 'Figtree', sans-serif;
+  width: 100%;
+}
+
+.ac_productMenu li a {
+  display: flex
+  ;
+      align-items: center;
+      gap: 2px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      /* padding: 8px 10px; */
+      border-radius: 10px;
+      transition: all 0.3s 
+  ease;
+      flex-direction: column;
+      width: 100%;
+      font-size: 12px;
+      justify-content: center;
+      text-align: center;
+      line-height: normal;
+}
+
+.ac_productMenu li a:hover {
+  background: rgba(250, 144, 22, 0.1);
+  color: #fa9016;
+}
+
+.ac_productMenu li a i {
+  width: 18px;
+  height: 18px;
+}
+
+svg.lucide {
+  max-width: 20px;
+  color: #fff;
+}
+

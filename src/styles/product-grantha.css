@@ -1,0 +1,272 @@
+/* Grantha Reference and Mythology Sections */
+
+/* ac-granthaRef-card */
+.ac-granthaRef-card__container{
+	width:100%;
+	padding:18px 16px;
+}
+.ac-granthaRef-card {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  height: fit-content;
+  max-width: 100%;
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  min-height: 155px;
+  height: 155px;
+  max-height: 155px;
+}
+
+.ac-granthaRef-card__content {
+  padding: 16px 16px;
+  background: rgba(0, 0, 0,0.6);
+ 
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.ac-granthaRef-card__textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+	    align-items: center;
+    justify-content: flex-start;
+}
+
+.ac-granthaRef-card.ac-granthaRef-card--twelve span.ac-granthaRef-card__heading {
+  color: #ffe3d1 !important;
+  font-size: 18px !important;
+	font-weight:700;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+	text-align:center;
+}
+
+p.ac-granthaRef-card__description {
+  font-size: 12px !important;
+  line-height: 18px;
+  color: #ffe3d1 !important;
+  letter-spacing: 0.35px;
+	margin:0px !important;
+	text-align:center;
+}
+
+span.ac-granthaRef-card__button {
+  margin: 0px !important;
+  background: transparent !important;
+  width: fit-content !important;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 8px 10px !important;
+  border-radius: 100vw;
+  font-size: 12px !important;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe3d1 !important;
+  border: none !important;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.25px;
+  max-height: fit-content !important;
+  min-height: fit-content !important;
+  height: fit-content !important;
+}
+
+.ac-granthaRef-card__bgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.ac-granthaRef-card__bgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ac-granthaRef-card */
+
+.ac-product-description__GranthicLogicContainer{
+	width:100%;
+	margin:16px 0px;
+}
+.ac-product-description__GranthicLogicContainer .ac-granthaRef-card__container{
+	padding:0px !important;
+}
+
+.ac-product-description__GranthicLogicContainer .ac-granthaRef-card__container .ac-granthaRef-card.ac-granthaRef-card--twelve{
+	min-height: auto !important;
+    height: auto !important;
+    max-height: fit-content !important;
+}
+.ac-product-description__GranthicLogic h4{
+	color: #ffe3d1 !important;
+    font-size: 18px !important;
+    font-weight: 700;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.ac-product-description__GranthicLogic {
+    display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ac-product-description__GranthicLogic p{
+	font-size: 12px !important;
+    line-height: 18px;
+    color: #ffe3d1 !important;
+    letter-spacing: 0.35px;
+    margin: 0px !important;
+    text-align: center;
+}
+.ac-product-description__GranthicLogic span{margin: 0px !important;
+    background: transparent !important;
+    width: fit-content !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 8px 10px !important;
+    border-radius: 100vw;
+    font-size: 12px !important;
+    line-height: 0px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    color: #ffe3d1 !important;
+    border: none !important;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.25px;
+    max-height: fit-content !important;
+    min-height: fit-content !important;
+    height: fit-content !important;}
+/* ac-product-description__GranthicLogicContainer  */
+
+/*  */
+.ac-special-info {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ac-special-info__container {
+  background-color: #ff6915;
+  padding: 18px 16px;
+
+  position: relative;
+}
+
+.ac-special-info__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.ac-special-info__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.ac-special-info__title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+span.ac-special-info__title-text {
+  font-size: 24px !important;
+  font-weight: 700;
+  line-height: 44px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ac-special-info__title-line {
+  width: 100%;
+  height: 30px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.ac-special-info__title-line img.ac-special-info__line-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ac-special-info__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: 30%; */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ac-special-info__bg img.ac-special-info__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ac-special-info__gif {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 60%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ac-special-info__gif img.ac-special-info__bg-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ac-product-description__MythReference p{
+	font-size: 16px !important;
+    line-height: 25px !important;
+	font-weight:500;
+	color:#ffffff !important;
+    margin: 0 !important;
+    margin-bottom: 16px !important;
+}
+/*  */
+
