@@ -16,7 +16,7 @@ export default function IngredientsOverview() {
       <h4 className="ac-product-description__ingredientSubTitle">
         Key Ingredients &amp; Their Roles
       </h4>
-      <div className="ac-product-description__ingredientList">
+      <div className="ac-product-description__ingredientList" >
         <ul>
           <li>
             <span>Shunti (Ginger):</span>

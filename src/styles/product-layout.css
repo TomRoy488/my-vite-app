@@ -1,37 +1,84 @@
 /* Product Page Layout Styles */
 
-.ac-product-description{
+.ac-product-description {
   /* padding: 10px 10px; */
-  display: grid;
-      grid-template-columns: 15% 85%;
-      gap: 10px;
-      width: 100%;
-      max-width: 100%;
-}
-
-.ac-product-description__content{
-	background-color: white;
-/*     padding: 18px 5%; */
-    /* border: #2e2d2d40 solid 2px; */
-    width: 100%;
-
-    padding: 10px 10px 0px 0px;
-}
-.ac-product-description__content > * {
+  display: flex;
+  grid-template-columns: 15% 85%;
+  gap: 0px;
   width: 100%;
+  max-width: 100%;
+}
+
+.ac-product-description__content {
+  background-color: white;
+  width: 100%;
+  padding: 10px 10px 0 10px;
+  opacity: 0;
+  transition: all .6s ease-in-out;
+  animation: fadeIn .6s ease-in-out .6s forwards;
+}
+
+.ac-product-description:has(.ac-product-description__menu.ac-product-description__menu-show)
+  .ac-product-description__content {
+  padding: 30px 10px 0 10px;
+  opacity: 0;
+  transition: all .6s ease-in-out;
+  animation: fadeInShow .6s ease-in-out .6s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInShow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.ac-product-description__content>* {
+  width: 100%;
+}
+
+.ac-product-description__ingredientList,
+.ac-product-description__DoshaContainer {
+  /* display: none; */
+  max-width: 300px;
+}
+
+.ac-product-description:has(.ac-product-description__menu.ac-product-description__menu-show) .ac-product-description__ingredientList,
+.ac-product-description:has(.ac-product-description__menu.ac-product-description__menu-show) .ac-product-description__DoshaContainer {
+  max-width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Product Menu Styles */
-.ac-product-description__menu{
+.ac-product-description__menu {
   width: 100%;
-    background: linear-gradient(180deg, #A276FF 0%, #ffffff 100%);
-    max-height: 100vh;
-    overflow: auto;
-    position: sticky;
-    top: 69px;
-    background: url(https://www.test.ayurcentral.in/wp-content/uploads/webp_images/Sidebar-Bkg.webp) center center / cover no-repeat;
+  background: linear-gradient(180deg, #A276FF 0%, #ffffff 100%);
+  max-height: 100vh;
+  max-height: calc(100vh - 100px);
+  /* overflow: auto; */
+  position: sticky;
+  top: 69px;
+  z-index: 99;
+  background: url(https://www.test.ayurcentral.in/wp-content/uploads/webp_images/Sidebar-Bkg.webp) center center / cover no-repeat;
+  /* position: relative; */
+  min-width: 60px;
+  max-width: 60px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
+  animation: slideOutToLeftShow 0.6s ease-in 0.2s forwards;
 }
-
+.ac-product-menu__content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
 .ac_productMenu {
   list-style: none;
   display: flex;
@@ -39,34 +86,102 @@
   gap: 12px;
   padding: 10px 10px;
   margin: 0;
-
   font-family: 'Figtree', sans-serif;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ac_productMenu li {
+  margin: 4px 0;
+  position: relative;
 }
 
 .ac_productMenu li a {
-  display: flex
-  ;
-      align-items: center;
-      gap: 2px;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 500;
-      /* padding: 8px 10px; */
-      border-radius: 10px;
-      transition: all 0.3s 
-  ease;
-      flex-direction: column;
-      width: 100%;
-      font-size: 12px;
-      justify-content: center;
-      text-align: center;
-      line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: column;
+  width: 100%;
+  font-size: 12px;
+  justify-content: center;
+  text-align: center;
+  line-height: normal;
+  position: relative;
+  z-index: 2;
 }
 
-.ac_productMenu li a:hover {
-  background: rgba(250, 144, 22, 0.1);
-  color: #fa9016;
+/* Selected menu item styling */
+.ac_productMenu li.ac-menu-item--selected a {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px) scale(1.02);
+  position: relative;
+  min-height: 70px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: selectedPulse 2s ease-in-out infinite;
+}
+
+.ac_productMenu li.ac-menu-item--selected a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: selectedGlow 2s ease-in-out infinite;
+}
+
+@keyframes selectedPulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px) scale(1.02);
+  }
+  50% {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px) scale(1.03);
+  }
+}
+
+@keyframes selectedGlow {
+  0%, 100% {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  }
+}
+.ac_productMenu li.ac-menu-item--selected{
+  width: 60px;
+  margin-left: -10px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ac_productMenu li.ac-menu-item--selected a svg {
+  color: #ffffff;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Hover effect for non-selected items */
+.ac_productMenu li:not(.ac-menu-item--selected) a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px) scale(1.01);
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ac_productMenu li a i {
@@ -79,3 +194,144 @@ svg.lucide {
   color: #fff;
 }
 
+
+
+.ac-product-menu__hideIcon {
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  padding: 5px;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  gap: 0px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.ac-product-menu__hideIcon svg.lucide {
+  max-width: 16px;
+  color: #000000;
+  flex-shrink: 0;
+  flex-grow: 0;
+} 
+
+.ac-product-menu-butNow{
+  width: 100%;
+  background: #fff;
+}
+
+.ac-product-menu-butNow a.ac-product-menu-butNow__link{
+  width: 100%;
+    background: #fff;
+    display: flex;
+    padding: 5px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    z-index: 5;
+    bottom: 0;
+  
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    
+    gap: 2px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+   
+    
+}
+a.ac-product-menu-butNow__link svg.lucide {
+  max-width: 16px;
+  color: #000000;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: none;
+}
+.ac-product-menu__showIconBox {
+  position: fixed;
+  width: 100%;
+  transform: translateX(-100%);
+}
+
+.ac-product-menu__hideIcon.ac-product-menu__showIcon {
+  /* position: absolute; */
+  top: -100%;
+  left: 0%;
+  /* right: -100%; */
+  /* flex-direction: column; */
+  width: 60px;
+  /* transform: translateX(100%); */
+}
+
+.ac-product-menu__hideIcon.ac-product-menu__showIcon span {
+  line-height: 10px;
+  text-align: center;
+}
+
+.ac-product-menu__showIconBox .ac-product-menu__hideIcon {
+  display: none;
+}
+
+.ac-product-description__menu.ac-product-description__menu-show {
+  position: fixed;
+  min-width: 60px;
+  max-width: 60px;
+  transform: translateX(0%);
+  overflow: visible;
+  animation: slideOutToLeft 0.6s ease-in 0.2s forwards;
+  
+}
+
+.ac-product-description__menu.ac-product-description__menu-show .ac-product-menu__showIconBox .ac-product-menu__hideIcon {
+  display: flex;
+}
+
+.ac-product-description__menu.ac-product-description__menu-show .ac-product-menu__showIconBox {
+  display: flex;
+
+  transform: translateX(-100%);
+  animation: slideInFromLeft 0.6s ease-out 0.7s forwards;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutToLeftShow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-0%);
+  }
+}
