@@ -8,7 +8,7 @@
 	display: grid
 ;
     gap: 10px;
-    grid-template-columns: min-content;
+    grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content min-content;
     grid-auto-flow: column;
     grid-auto-columns: min-content;
@@ -25,8 +25,9 @@
     width: 100%;
     flex-shrink: 0;
     flex-grow: 0;
-    max-width: 300px;
-    min-width: 300px;
+    /* max-width: 300px; */
+    /* min-width: 300px; */
+    width: 100%;
     border-radius: 8px;
     overflow: hidden;
 	margin:0 !important;
