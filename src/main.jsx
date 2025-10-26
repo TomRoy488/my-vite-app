@@ -14,7 +14,6 @@ import "./styles/product-grantha.css";
 import "./styles/custom.css";
 // import "./styles/custom-clean.css";
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
