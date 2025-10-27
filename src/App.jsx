@@ -1,9 +1,9 @@
 import Header from "./components/Header";
 import ProductMenu from "./components/ProductMenu";
+import ProductImageGallery from "./components/product/ProductImageGallery";
 import ProductHeader from "./components/product/ProductHeader";
 import ProductHighlights from "./components/product/ProductHighlights";
 import ProductDescriptionTitle from "./components/product/ProductDescriptionTitle";
-import ProductOverview from "./components/product/ProductOverview";
 import CoreDescription from "./components/product/CoreDescription";
 import UsesCases from "./components/product/UsesCases";
 import ContextUse from "./components/product/ContextUse";
@@ -28,13 +28,13 @@ function App() {
 
         {/* Product Content */}
         <div className="ac-product-description__content">
+          <ProductImageGallery />
           <ProductHeader />
           <ProductHighlights />
-          <ProductDescriptionTitle />
-          <ProductOverview />
+          {/* <ProductDescriptionTitle /> */}
           <CoreDescription />
           <UsesCases />
-          <ContextUse />
+          {/* <ContextUse /> */}
           <KeyBenefits />
           <WhatToExpect />
           <HowToUse />

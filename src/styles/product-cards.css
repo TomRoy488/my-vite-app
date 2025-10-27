@@ -36,32 +36,32 @@
 p.ac-blog-quoteCard__text {
   font-size: 14px !important;
   font-weight: 600;
-  line-height: 20px;
+  line-height: normal !important;
   margin: 0px !important;
 }
 span.ac-blog-quoteCard__meta {
   font-size: 14px !important;
   font-weight: 700;
-  line-height: normal;
+  line-height: normal !important;
   margin: 0px !important;
   font-style: italic;
 }
 .ac-product-description__ScientificValidation p{
-	font-size:16px !important;
-	line-height:25px !important;
+	font-size:14px !important;
+	line-height: normal !important;
 	margin:0 !important;
 	margin-bottom:16px !important;
 }
 .ac-product-description__ScientificValidation span{
-		font-size: 16px !important;
+		font-size: 14px !important;
     font-weight: 700;
-    line-height: normal;
+    line-height: normal !important;
     margin: 0px !important;
     font-style: italic;
 }
 .ac-product-description__Formulation p{
-	font-size:16px !important;
-	line-height:25px !important;
+	font-size:14px !important;
+	line-height: normal !important;
 	margin:0 !important;
 	margin-bottom:16px !important;
 }

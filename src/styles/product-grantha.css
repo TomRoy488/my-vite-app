@@ -44,7 +44,7 @@
   color: #ffe3d1 !important;
   font-size: 18px !important;
 	font-weight:700;
-  line-height: 24px;
+  line-height: normal !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,9 +54,8 @@
 
 p.ac-granthaRef-card__description {
   font-size: 12px !important;
-  line-height: 18px;
+  line-height: normal !important;
   color: #ffe3d1 !important;
-  letter-spacing: 0.35px;
 	margin:0px !important;
 	text-align:center;
 }
@@ -70,7 +69,7 @@ span.ac-granthaRef-card__button {
   padding: 8px 10px !important;
   border-radius: 100vw;
   font-size: 12px !important;
-  line-height: 0px;
+  line-height: normal !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +78,6 @@ span.ac-granthaRef-card__button {
   text-decoration: none;
   font-weight: 400;
   text-transform: none;
-  letter-spacing: 0.25px;
   max-height: fit-content !important;
   min-height: fit-content !important;
   height: fit-content !important;
@@ -121,7 +119,7 @@ span.ac-granthaRef-card__button {
 	color: #ffe3d1 !important;
     font-size: 18px !important;
     font-weight: 700;
-    line-height: 24px;
+    line-height: normal !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,10 +135,9 @@ span.ac-granthaRef-card__button {
     justify-content: flex-start;
 }
 .ac-product-description__GranthicLogic p{
-	font-size: 12px !important;
-    line-height: 18px;
+	font-size: 14px !important;
+    line-height: normal !important;
     color: #ffe3d1 !important;
-    letter-spacing: 0.35px;
     margin: 0px !important;
     text-align: center;
 }
@@ -151,8 +148,10 @@ span.ac-granthaRef-card__button {
     flex-grow: 0;
     padding: 8px 10px !important;
     border-radius: 100vw;
-    font-size: 12px !important;
-    line-height: 0px;
+    font-size: 14px !important;
+    text-align: center;
+    width: 100% !important;
+    line-height: normal !important;
     display: flex
 ;
     align-items: center;
@@ -162,7 +161,6 @@ span.ac-granthaRef-card__button {
     text-decoration: none;
     font-weight: 400;
     text-transform: none;
-    letter-spacing: 0.25px;
     max-height: fit-content !important;
     min-height: fit-content !important;
     height: fit-content !important;}
@@ -206,7 +204,7 @@ span.ac-granthaRef-card__button {
 span.ac-special-info__title-text {
   font-size: 24px !important;
   font-weight: 700;
-  line-height: 44px;
+  line-height: normal !important;
   color: #ffffff;
   text-align: center;
 }
@@ -261,8 +259,8 @@ span.ac-special-info__title-text {
   object-fit: cover;
 }
 .ac-product-description__MythReference p{
-	font-size: 16px !important;
-    line-height: 25px !important;
+	font-size: 14px !important;
+    line-height: normal !important;
 	font-weight:500;
 	color:#ffffff !important;
     margin: 0 !important;

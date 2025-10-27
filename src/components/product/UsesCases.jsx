@@ -1,4 +1,7 @@
 import ACProductSection from "../ACProductSection";
+import { 
+  ArrowRight
+} from "lucide-react";
 
 export default function UsesCases() {
   return (
@@ -11,23 +14,38 @@ export default function UsesCases() {
         </p>
         <ul>
           <li>
-            <span>After heavy meals:</span>
+            <img src="https://www.ayurcentralonline.com/wp-content/uploads/2024/06/Digestive-Health-4.png" alt="" />
+            <span>Digestion</span>
             <p>
               Helps in soothing digestion when the stomach feels overburdened.
             </p>
+            <a href=""> <ArrowRight strokeWidth={1.5} size={16} /> Explore treatment for digestion </a>
           </li>
           <li>
-            <span>During seasonal changes:</span>
+          <img src="https://www.ayurcentralonline.com/wp-content/uploads/2024/06/Digestive-Health-4.png" alt="" />
+            <span>Seasonal</span>
             <p>
               Traditionally used to maintain digestive balance as seasons
               shift.
             </p>
+            <a href=""> <ArrowRight strokeWidth={1.5} size={16} /> Explore treatment for digestion </a>
           </li>
           <li>
-            <span>When experiencing occasional acidity:</span>
+          <img src="https://www.ayurcentralonline.com/wp-content/uploads/2024/06/Digestive-Health-4.png" alt="" />
+            <span>Acidity</span>
             <p>
               Supports the body's natural processes in maintaining comfort.
             </p>
+            <a href=""> <ArrowRight strokeWidth={1.5} size={16} /> Explore treatment for digestion </a>
+          </li>
+          <li>
+          <img src="https://www.ayurcentralonline.com/wp-content/uploads/2024/06/Digestive-Health-4.png" alt="" />
+            <span>Seasonal</span>
+            <p>
+              Traditionally used to maintain digestive balance as seasons
+              shift.
+            </p>
+            <a href=""> <ArrowRight strokeWidth={1.5} size={16} /> Explore treatment for digestion </a>
           </li>
         </ul>
       </div>

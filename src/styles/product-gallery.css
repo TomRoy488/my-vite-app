@@ -1,0 +1,172 @@
+/* Product Gallery Container */
+.ac_galleryContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Main Preview Image */
+.ac_mainPreview {
+  position: relative;
+  width: 80%;
+  
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.ac_mainPreview:hover {
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); */
+}
+
+.ac_mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.ac_mainPreview:hover .ac_mainImage {
+  transform: scale(1.02);
+}
+
+.ac_previewOverlay {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.ac_mainPreview:hover .ac_previewOverlay {
+  opacity: 0.05;
+}
+
+/* Thumbnails Strip */
+.ac_thumbnailsStrip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  /* Hide scrollbar for cleaner look */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ac_thumbnailsStrip::-webkit-scrollbar {
+  display: none;
+}
+
+/* Thumbnail Wrapper */
+.ac_thumbWrapper {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.ac_thumbWrapper:hover {
+  /* transform: scale(1.1); */
+  /* border-color: #d1d5db; */
+}
+
+.ac_thumbActive {
+  /* border-color: #f97316 !important;  */
+  border-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
+  /* box-shadow: 0 4px 8px rgba(249, 115, 22, 0.3); */
+}
+
+.ac_thumbImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
+
+.ac_activeIndicator {
+  position: absolute;
+  inset: 0;
+  /* border: 1px solid var(--color-primary); */
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 767px) {
+  .ac_galleryContainer {
+    padding: 10px;
+  }
+
+  .ac_mainPreview {
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+
+  .ac_thumbnailsStrip {
+    gap: 8px;
+  }
+
+  .ac_thumbImage {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ac_galleryContainer {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .ac_thumbImage {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (min-width: 1024px) {
+  .ac_galleryContainer {
+    max-width: 800px;
+    padding: 24px;
+  }
+
+  .ac_thumbImage {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Ensure gallery doesn't break on very small screens */
+@media (max-width: 480px) {
+  .ac_galleryContainer {
+    padding: 8px;
+  }
+
+  .ac_thumbImage {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Override lightbox thumbnail width */
+.yarl__thumbnails_thumbnail {
+  width: 80px !important;
+  /* height: 60px !important; */
+  object-fit: cover !important;
+}
+

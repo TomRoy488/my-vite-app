@@ -65,7 +65,7 @@
   
   /* Base Styles */
   font-family: var(--font-primary);
-  line-height: var(--line-height-base);
+  line-height: normal !important;
   font-weight: 400;
   color-scheme: light dark;
   color: var(--color-text-dark);
@@ -116,7 +116,7 @@ body {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: normal !important;
 }
 
 /* A elements that don't have a class get default styles */

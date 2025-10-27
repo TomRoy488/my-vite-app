@@ -40,7 +40,7 @@ export default function ProductMenu() {
           className="ac-product-menu__hideIcon ac-product-menu__showIcon"
           onClick={handleShowMenu}
         >
-          <span>Show</span> <ChevronRight size={18} /> 
+          <span>Show Sidebar</span> <ChevronRight size={18} /> 
         </span>
       </div>
       
@@ -107,6 +107,7 @@ export default function ProductMenu() {
             <Sun size={18} /> <span>Mythology</span>
           </a>
         </li>
+        
       </ul>
       </div>
       <div className="ac-product-menu-butNow">
