@@ -17,7 +17,7 @@ export default function QuoteCardContainer({
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
-              fill="#ec520b"
+              fill="currentColor"
               viewBox="0 0 24 24"
             >
               <path

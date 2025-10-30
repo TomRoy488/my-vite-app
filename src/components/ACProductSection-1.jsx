@@ -1,5 +1,5 @@
 export default function ACProductSection({
-  as = "section", // default tag type
+  as: Tag = "section", // default tag type
   className = "",
   children,
   ...props // allows id, style, data-*, etc.
@@ -7,9 +7,7 @@ export default function ACProductSection({
   const baseClass = "ac-product-section";
   const combinedClasses = `${baseClass} ${className}`.trim();
 
-  // Use the 'as' prop directly in JSX
-  const Tag = as;
-
+  // ✅ Tag is now used directly in JSX
   return (
     <Tag className={combinedClasses} {...props}>
       {children}

@@ -1,6 +1,31 @@
 import ACProductSection from "../ACProductSection";
+import {
+  ArrowRight
+} from "lucide-react";
+import { useEffect } from "react";
 
 export default function IngredientsOverview() {
+  useEffect(() => {
+    const handleParagraphClick = (event) => {
+      const target = event.target;
+      let pElement = target;
+      if (target.tagName !== 'P') {
+        pElement = target.closest('p');
+      }
+      if (pElement && pElement.closest('.ac-product-description__ingredient ul li')) {
+        pElement.classList.toggle('ac-text-expanded');
+      }
+    };
+
+    const container = document.querySelector('.ac-product-description__ingredient');
+    if (container) {
+      container.addEventListener('click', handleParagraphClick);
+      return () => {
+        container.removeEventListener('click', handleParagraphClick);
+      };
+    }
+  }, []);
+
   return (
     <ACProductSection className="ac-product-description__ingredient">
       <h3 className="ac-product-description__ingredientTitle">
@@ -19,20 +44,39 @@ export default function IngredientsOverview() {
       <div className="ac-product-description__ingredientList" >
         <ul>
           <li>
-            <span>Shunti (Ginger):</span>
-            <p>Renowned for its warming and digestive properties.</p>
+            <img src="https://m.media-amazon.com/images/I/41Pvfjsk9uS._AC_UF1000,1000_QL80_.jpg" alt="Svetachandana Mula" />
+            <span>Svetachandana Mula</span>
+            <p>
+              Renowned for its warming and digestive properties. Known for its cooling and rejuvenating qualities.
+            </p>
+            <a href="#"> <ArrowRight strokeWidth={1.5} size={16} /> Explore more about Shunti </a>
           </li>
           <li>
-            <span>Pippali (Long Pepper):</span>
-            <p>Traditionally used to enhance digestive fire.</p>
+            <img src="https://m.media-amazon.com/images/I/41Pvfjsk9uS._AC_UF1000,1000_QL80_.jpg" alt="Kampillaka Pushpa" />
+            <span>Kampillaka Pushpa</span>
+            <p>
+              Traditionally used to enhance digestive fire. Known for its cooling and rejuvenating qualities.
+            </p>
+            <a href="#"> <ArrowRight strokeWidth={1.5} size={16} /> Explore more about Shunti </a>
           </li>
           <li>
-            <span>Amalaki (Indian Gooseberry):</span>
-            <p>Known for its cooling and rejuvenating qualities.</p>
+            <img src="https://m.media-amazon.com/images/I/41Pvfjsk9uS._AC_UF1000,1000_QL80_.jpg" alt="Parijataka Pushpa" />
+            <span>Parijataka Pushpa</span>
+            <p>
+              Known for its cooling and rejuvenating qualities. Known for its cooling and rejuvenating qualities.
+            </p>
+            <a href="#"> <ArrowRight strokeWidth={1.5} size={16} /> Explore more about Shunti </a>
+          </li>
+          <li>
+            <img src="https://m.media-amazon.com/images/I/41Pvfjsk9uS._AC_UF1000,1000_QL80_.jpg" alt="Agnimantha Patra" />
+            <span>Agnimantha Patra</span>
+            <p>
+              Known for its cooling and rejuvenating qualities. Known for its cooling and rejuvenating qualities.
+            </p>
+            <a href="#"> <ArrowRight strokeWidth={1.5} size={16} /> Explore more about Shunti </a>
           </li>
         </ul>
       </div>
     </ACProductSection>
   );
 }
-

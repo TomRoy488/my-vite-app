@@ -15,8 +15,7 @@
     overflow: auto;
     width: 100%;
     overflow: auto;
-    max-height: 310px;
-    min-height: 310px;
+    padding-bottom: 25px !important;
 }
 
 .ac-product-description__UsesCases ul li{

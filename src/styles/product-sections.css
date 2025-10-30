@@ -73,7 +73,7 @@ h3.ac-product-description__subtitle{
 .ac-product-description__UsesCases{
 	margin:0 !important;
 	margin-bottom:16px !important;
-	max-width: 300px;
+	/* max-width: 300px; */
 }
 
 .ac-product-description__UsesCases h4{

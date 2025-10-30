@@ -1,24 +1,47 @@
+import { ContentProvider, useContent } from "../context/ContentContext";
+import ProductHeader from "./components/ProductHeader";
+import ProductHighlights from "./components/ProductHighlights";
+import ProductDescription from "./components/ProductDescription";
+import ScientificValidation from "./components/ScientificValidation";
+import DoshaGuide from "./components/DoshaGuide";
+import GranthicLogic from "./components/GranthicLogic";
+import MythReference from "./components/MythReference";
 import Header from "./components/Header";
 import ProductMenu from "./components/ProductMenu";
 import ProductImageGallery from "./components/product/ProductImageGallery";
-import ProductHeader from "./components/product/ProductHeader";
-import ProductHighlights from "./components/product/ProductHighlights";
-import ProductDescriptionTitle from "./components/product/ProductDescriptionTitle";
-import CoreDescription from "./components/product/CoreDescription";
 import UsesCases from "./components/product/UsesCases";
-import ContextUse from "./components/product/ContextUse";
-import KeyBenefits from "./components/product/KeyBenefits";
-import WhatToExpect from "./components/product/WhatToExpect";
-import HowToUse from "./components/product/HowToUse";
 import IngredientsOverview from "./components/product/IngredientsOverview";
-import SafetySuitability from "./components/product/SafetySuitability";
-import ScientificValidation from "./components/product/ScientificValidation";
-import FormulationLogic from "./components/product/FormulationLogic";
-import DoshaGuide from "./components/product/DoshaGuide";
-import GranthicLogic from "./components/product/GranthicLogic";
-import MythReference from "./components/product/MythReference";
+import ScientificPublications from "./components/ScientificPublications";
+// Loading component
+function LoadingSpinner() {
+  return (
+    <div className="p-8 text-center">
+      <p>Loading content...</p>
+    </div>
+  );
+}
 
-function App() {
+// Error component
+function ErrorMessage({ error }) {
+  return (
+    <div className="p-8 text-center text-red-600">
+      <p>Error loading content: {error}</p>
+    </div>
+  );
+}
+
+// Main content component
+function AppContent() {
+  const { loading, error } = useContent();
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
+  if (error) {
+    return <ErrorMessage error={error} />;
+  }
+
   return (
     <>
       <Header />
@@ -31,23 +54,30 @@ function App() {
           <ProductImageGallery />
           <ProductHeader />
           <ProductHighlights />
-          {/* <ProductDescriptionTitle /> */}
-          <CoreDescription />
           <UsesCases />
-          {/* <ContextUse /> */}
-          <KeyBenefits />
-          <WhatToExpect />
-          <HowToUse />
           <IngredientsOverview />
-          <SafetySuitability />
-          <ScientificValidation />
-          <FormulationLogic />
           <DoshaGuide />
+          <ScientificPublications />
+          <ProductDescription />
+          <ScientificValidation />
+
           <GranthicLogic />
           <MythReference />
         </div>
       </div>
     </>
+  );
+}
+
+// App wrapper with provider
+function App() {
+  const contentId = '6629'; //urlParams.get('content_id') || 'default';
+
+
+  return (
+    <ContentProvider contentId={contentId}>
+      <AppContent />
+    </ContentProvider>
   );
 }
 
